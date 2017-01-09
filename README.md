@@ -1,2 +1,1 @@
-# pew
-pew pew project
+# PEW PEW Project
