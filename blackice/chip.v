@@ -31,6 +31,7 @@ module chip (
   );
 
   wire	rst = 1'b0;		// Reset is active high
+  wire [3:0] led_stub;
 
   // SRAM signals are not use in this design, lets set them to default values
   assign ADR[18:0] = {19{1'b0}};
@@ -45,7 +46,7 @@ module chip (
 
   pew u0 (
     .clk  (clk),
-    .status   (PMOD[55:52]),
+    .status   ({PMOD[55:52], led_stub}),
     .trigger  (PMOD[33]), // PMOD9/10 = pin9  = 13A
     .pew      (PMOD[32])  // PMOD9/10 = pin11 = 13B
   );

@@ -15,7 +15,7 @@ function pixelh (arr, idx) {
 }
 
 fs.createReadStream(
-    path.resolve('.', 'Pulse.png'))
+    path.resolve(__dirname, 'Pulse.png'))
     .pipe(new PNG({
         filterType: 4
     }))
